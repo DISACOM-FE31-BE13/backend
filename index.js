@@ -46,6 +46,9 @@ app.use("/api/v1/review", reviewRoute);
 app.use("/api/v1/apply", applyRoute);
 app.use("/api/v1/join", joinRoute);
 app.use("/api/v1/motivasi", motivasiRoute);
+app.use("/", (req,res) =>{
+  res.send("Welcome to the server home page")
+)}
 
 app.listen(port, () => {
   connect();
